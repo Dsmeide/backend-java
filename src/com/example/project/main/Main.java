@@ -12,6 +12,7 @@ class Main {
 	public static void main(String[] args) {
 		IUserRepo userRepo = new UserRepo(); 
 		IUserService userService = new UserService(userRepo);
+		
 		Collection<UserModel> users = userService.getAllUsers();
 		users.forEach(user -> {
 			System.out.println(user);

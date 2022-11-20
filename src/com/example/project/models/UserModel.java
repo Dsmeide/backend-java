@@ -1,23 +1,22 @@
 package com.example.project.models;
 
 import java.util.List;
-import java.util.UUID;
 
 public class UserModel {
 
-	private UUID id;
+	private int id;
 	private String firstName;
 	private String lastName;
 	private List<Role> roles;
 
-	public UserModel(UUID id, String firstName, String lastName, List<Role> roles) {
+	public UserModel(int id, String firstName, String lastName, List<Role> roles) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.roles = roles;
 	}
 	
-	public UUID getId() {
+	public int getId() {
 		return id;
 	}
 

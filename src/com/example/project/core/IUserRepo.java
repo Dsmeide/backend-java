@@ -6,4 +6,5 @@ import com.example.project.models.UserModel;
 
 public interface IUserRepo {
 	Collection<UserModel> getAllUsers();
+	UserModel getUserById(int id);
 }

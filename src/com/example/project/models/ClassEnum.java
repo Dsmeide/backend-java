@@ -1,6 +1,6 @@
 package com.example.project.models;
 
-public enum CharacterClass {
+public enum ClassEnum {
 	Bard,
 	Cleric,
 	Druid,

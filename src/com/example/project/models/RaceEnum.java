@@ -1,6 +1,6 @@
 package com.example.project.models;
 
-public enum Race {
+public enum RaceEnum {
 	DarkElf,
 	Dwarf,
 	Gnome,

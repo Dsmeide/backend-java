@@ -4,10 +4,10 @@ public class CharacterModel {
 	private long id;
 	private String firstName;
 	private String lastName;
-	private CharacterClass characterClass;
+	private ClassEnum characterClass;
 	// TODO: Add race
 
-	public CharacterModel(long id, String firstName, String lastName, CharacterClass characterClass) {
+	public CharacterModel(long id, String firstName, String lastName, ClassEnum characterClass) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -35,7 +35,7 @@ public class CharacterModel {
 		this.lastName = lastName;
 	}
 
-	public CharacterClass getCharacterClass() {
+	public ClassEnum getCharacterClass() {
 		return characterClass;
 	}
 	

@@ -2,13 +2,17 @@ package com.example.project.services.tests;
 
 
 import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.*;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.anyList;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
 import java.util.Collection;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -35,6 +39,8 @@ class UserServiceTests {
 	@Test
 	void UserService_GetAllUsers_ReturnsAllUsers() {
 		ArrayList<UserModel> users = new ArrayList<UserModel>() {
+			private static final long serialVersionUID = 1L;
+
 			{
 				add(new UserModel(anyInt(), anyString(), anyString(), anyList()));
 			}

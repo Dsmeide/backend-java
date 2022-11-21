@@ -1,21 +1,17 @@
 package com.example.project.main;
 
-import java.util.Collection;
+import java.util.HashMap;
 
-import com.example.project.core.IUserRepo;
-import com.example.project.core.IUserService;
-import com.example.project.models.UserModel;
-import com.example.project.repos.UserRepo;
-import com.example.project.services.UserService;
+import com.example.project.core.ICharacterRepo;
+import com.example.project.models.CharacterModel;
+import com.example.project.repos.CharacterRepo;
 
 class Main {
 	public static void main(String[] args) {
-		IUserRepo userRepo = new UserRepo(); 
-		IUserService userService = new UserService(userRepo);
-		
-		Collection<UserModel> users = userService.getAllUsers();
-		users.forEach(user -> {
-			System.out.println(user);
+		ICharacterRepo characterRepo = new CharacterRepo();
+		HashMap<Long, CharacterModel> characters = characterRepo.loadCharacters();
+		characters.values().forEach(character -> {
+			System.out.println(character);
 		});
 	}
 }

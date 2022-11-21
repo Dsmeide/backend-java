@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "firstName": "Baldaaf",
+        "lastName": "Brickhouse",
+        "class": "Warrior",
+        "race": "Ogre"
+    },
+    {
+        "id": 2,
+        "firstName": "Littledog",
+        "lastName": "Bigbite",
+        "class": "Mage",
+        "race": "Gnome"
+    }
+]

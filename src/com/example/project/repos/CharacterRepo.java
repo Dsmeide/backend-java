@@ -12,6 +12,7 @@ import org.json.simple.parser.ParseException;
 
 import com.example.project.core.ICharacterRepo;
 import com.example.project.models.ClassEnum;
+import com.example.project.models.RaceEnum;
 import com.example.project.models.CharacterModel;
 
 public class CharacterRepo implements ICharacterRepo {
@@ -41,9 +42,10 @@ public class CharacterRepo implements ICharacterRepo {
             String firstName = (String) character.get("firstName");
             String lastName = (String) character.get("lastName");
             ClassEnum charClass = ClassEnum.valueOf((String) character.get("class"));
+            RaceEnum charRace = RaceEnum.valueOf((String) character.get("race"));
             // TODO: load race value
             
-            CharacterModel model = new CharacterModel(id, firstName, lastName, charClass);
+            CharacterModel model = new CharacterModel(id, firstName, lastName, charClass, charRace);
             results.put(id, model);
 
         }

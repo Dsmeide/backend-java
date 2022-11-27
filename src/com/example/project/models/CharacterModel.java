@@ -1,20 +1,32 @@
 package com.example.project.models;
 
-public class CharacterModel {
+import com.example.project.core.ICharacterClass;
+import com.example.project.core.ICharacterRace;
+import com.example.project.core.ICharacterStats;
+
+// Race
+// Class
+// Character
+//   Race
+//   Class
+// Main
+// character.attack = Character.attack { return race.attack + class.attack + char.stats }
+
+public class CharacterModel implements ICharacterStats {
 	private long id;
 	private String firstName;
 	private String lastName;
-	private ClassEnum characterClass;
-	private RaceEnum characterRace;
-	// TODO: Add race
+	private long strength;
+	private ICharacterClass characterClass;
+	private ICharacterRace characterRace;
 
-	public CharacterModel(long id, String firstName, String lastName, ClassEnum characterClass, RaceEnum characterRace) {
+	public CharacterModel(long id, String firstName, String lastName, long strength, ICharacterClass characterClass, ICharacterRace characterRace) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.strength = strength;
 		this.characterClass = characterClass;
 		this.characterRace = characterRace;
-		// TODO: take race as a parameter and set it
 	}
 	
 	public long getId() {
@@ -36,18 +48,16 @@ public class CharacterModel {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-
-	public ClassEnum getCharacterClass() {
-		return characterClass;
-	}
 	
-	// TODO: Allow getting Race
-	public RaceEnum getCharacterRace() {
-		return characterRace;
+	@Override
+	public long getStrength() {
+		return this.strength + this.characterClass.getStrength() + this.characterRace.getStrength();
 	}
-	// TODO: Update method to print race
+
+	@Override
 	public String toString() {
-		return String.format("{Id: %s, FirstName: %s, LastName: %s, Class: %s, Race: %s}", 
-				id, firstName, lastName, characterClass, characterRace);
+		return String.format("{Id: %s, FirstName: %s, LastName: %s, Class: %s, Race: %s, Str: %s}", 
+				id, firstName, lastName, characterClass, characterRace, this.getStrength());
 	}
+
 }

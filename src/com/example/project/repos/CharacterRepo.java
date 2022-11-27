@@ -11,7 +11,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import com.example.project.core.ICharacterClass;
-import com.example.project.core.ICharacterRace;
+import com.example.project.core.CharacterRace;
 import com.example.project.core.ICharacterRepo;
 import com.example.project.core.classes.Mage;
 import com.example.project.core.classes.Warrior;
@@ -58,7 +58,7 @@ public class CharacterRepo implements ICharacterRepo {
 	        		break;
             }
             
-            ICharacterRace charRace = null;
+            CharacterRace charRace = null;
             String strRace = ((String) character.get("race")).toLowerCase();
             switch(strRace) {
 	        	case "gnome": 

@@ -1,15 +1,10 @@
 package com.example.project.core.races;
 
-import com.example.project.core.ICharacterRace;
+import com.example.project.core.CharacterRace;
 
-public class Gnome implements ICharacterRace {
+public class Gnome extends CharacterRace {
 	@Override
 	public long getStrength() {
 		return 3;
-	}
-	
-	@Override
-	public String toString() {
-		return this.getClass().getSimpleName();
 	}
 }

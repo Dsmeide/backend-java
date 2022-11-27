@@ -1,7 +1,7 @@
 package com.example.project.models;
 
 import com.example.project.core.ICharacterClass;
-import com.example.project.core.ICharacterRace;
+import com.example.project.core.CharacterRace;
 import com.example.project.core.ICharacterStats;
 
 // Race
@@ -18,9 +18,9 @@ public class CharacterModel implements ICharacterStats {
 	private String lastName;
 	private long strength;
 	private ICharacterClass characterClass;
-	private ICharacterRace characterRace;
+	private CharacterRace characterRace;
 
-	public CharacterModel(long id, String firstName, String lastName, long strength, ICharacterClass characterClass, ICharacterRace characterRace) {
+	public CharacterModel(long id, String firstName, String lastName, long strength, ICharacterClass characterClass, CharacterRace characterRace) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;

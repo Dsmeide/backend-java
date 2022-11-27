@@ -1,15 +1,10 @@
 package com.example.project.core.races;
 
-import com.example.project.core.ICharacterRace;
+import com.example.project.core.CharacterRace;
 
-public class Ogre implements ICharacterRace {
+public class Ogre extends CharacterRace {
 	@Override
 	public long getStrength() {
 		return 7;
-	}
-	
-	@Override
-	public String toString() {
-		return this.getClass().getSimpleName();
 	}
 }
